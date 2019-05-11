@@ -30,7 +30,7 @@ $( "#searchForm" ).submit(function( event ) {
      pe=term = $form.find( "input[name='e']" ).val(), 
      pp=term = $form.find( "input[name='p']" ).val(), 
 
-     url = "https://owner-api.teslamotors.com/oauth/token?grant_type=password" ;
+     url = "https://owner-api.teslamotors.com/oauth/token" ;
   // Send the data using post
   var posting = $.post( url, {
   "grant_type": "password",
