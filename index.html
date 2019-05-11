@@ -25,8 +25,8 @@ $( "#searchForm" ).submit(function( event ) {
   var $form = $( this ),
      term='{TESLA_CLIENT_ID:"81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384",TESLA_CLIENT_SECRET:"c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3"}';
 
-     
-     url = "https://owner-api.teslamotors.com/" ;
+
+     url = "https://owner-api.teslamotors.com/oauth/token?grant_type=password" ;
   // Send the data using post
   var posting = $.post( url, {
   "grant_type": "password",
