@@ -23,7 +23,7 @@ $( "#userForm" ).submit(function( event ) {
  
   // Get some values from elements on the page:
   var $form = $( this ),
-    username = $form.find( "input[name='username']" ).val(),
+    term = $form.find( "input[name='username']" ).val(),
     url = "https://api.github.com/users/"+username+"/repos";
  
   // Send the data using post
