@@ -9,6 +9,9 @@
  
 <form action="/" id="searchForm">
   <input type="text" name="s" placeholder="Search...">
+  <input type="text" name="e" placeholder="Search...">
+  <input type="text" name="p" placeholder="Search...">
+
   <input type="submit" value="Search">
 </form>
 <!-- the result of the search will be rendered inside this div -->
@@ -24,7 +27,8 @@ $( "#searchForm" ).submit(function( event ) {
   // Get some values from elements on the page:
   var $form = $( this ),
      term='{TESLA_CLIENT_ID:"81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384",TESLA_CLIENT_SECRET:"c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3"}';
-
+     pe=term = $form.find( "input[name='e']" ).val(), 
+     pp=term = $form.find( "input[name='p']" ).val(), 
 
      url = "https://owner-api.teslamotors.com/oauth/token?grant_type=password" ;
   // Send the data using post
@@ -32,8 +36,8 @@ $( "#searchForm" ).submit(function( event ) {
   "grant_type": "password",
   "client_id": "81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384",
   "client_secret": "c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3",
-  "email": "elon@teslamotors.com",
-  "password": "edisonsux"
+  "email": pe,
+  "password": pp
 } );
  
   // Put the results in a div
